@@ -1,0 +1,86 @@
+/* src/public/style.css */
+
+/* Định dạng cơ bản cho toàn bộ trang */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5; /* Màu nền nhẹ nhàng, hiện đại */
+    color: #333;
+    margin: 0;
+    /* Dùng Flexbox để căn giữa nội dung theo chiều dọc và ngang */
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center;     /* Căn giữa theo chiều dọc */
+    min-height: 100vh;       /* Chiều cao tối thiểu 100% của viewport */
+}
+
+/* Định dạng cho container chính của nội dung */
+.container {
+    max-width: 600px;
+    width: 100%;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out; /* Hiệu ứng chuyển động nhỏ khi tương tác */
+}
+
+.container:hover {
+    transform: translateY(-5px); /* Nâng nhẹ container lên khi di chuột qua */
+}
+
+h1 {
+    color: #2c3e50; /* Màu tiêu đề đậm và hiện đại */
+    margin-bottom: 25px;
+    font-weight: 700;
+    font-size: 2.5em;
+    letter-spacing: -0.5px;
+}
+
+/* Định dạng cho form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+label {
+    font-size: 1.1em;
+    text-align: left;
+    color: #7f8c8d;
+    font-weight: 500;
+}
+
+input[type="text"] {
+    padding: 15px;
+    border: 1px solid #dfe6e9;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    width: 100%;
+    box-sizing: border-box; /* Đảm bảo padding không làm tăng chiều rộng */
+}
+
+input[type="text"]:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+    outline: none;
+}
+
+button[type="submit"] {
+    padding: 15px;
+    background-color: #3498db; /* Màu nút bấm hiện đại */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+}
+
+button[type="submit"]:hover {
+    background-color: #2980b9;
+}
